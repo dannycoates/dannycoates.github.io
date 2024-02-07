@@ -5,12 +5,368 @@
     <title>Danny Coates</title>
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
+    <meta
+      name="theme-color"
+      content="#000"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#000"
+      media="(prefers-color-scheme: dark)"
+    />
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+      }
+      ::after,
+      ::before {
+        --x-content: "";
+      }
+      :host,
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        margin: 2rem;
+        line-height: inherit;
+      }
+      h1,
+      h2,
+      h3 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      a {
+        color: var(--x-prose-links);
+        text-decoration: underline;
+        font-weight: 500;
+      }
+      b {
+        font-weight: bolder;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        list-style-type: disc;
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
+        padding-left: 1.625em;
+      }
+      .prose {
+        color: var(--x-prose-body);
+        max-width: 42rem;
+      }
+
+      .prose :where(ul > li)::marker {
+        color: var(--x-prose-bullets);
+      }
+      .prose :where(h1) {
+        color: var(--x-prose-headings);
+        font-weight: 800;
+        font-size: 2.25em;
+        margin-top: 0;
+        margin-bottom: 0.8888889em;
+        line-height: 1.1111111;
+      }
+      .prose :where(h2) {
+        color: var(--x-prose-headings);
+        font-weight: 700;
+        font-size: 1.5em;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        line-height: 1.3333333;
+      }
+      .prose :where(h3) {
+        color: var(--x-prose-headings);
+        font-weight: 600;
+        font-size: 1.25em;
+        margin-top: 1.6em;
+        margin-bottom: 0.6em;
+        line-height: 1.6;
+      }
+      .prose {
+        --x-prose-body: #374151;
+        --x-prose-headings: #111827;
+        --x-prose-links: #111827;
+        --x-prose-bullets: #d1d5db;
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+      li {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+      ul > li {
+        padding-left: 0.375em;
+      }
+      h2 + * {
+        margin-top: 0;
+      }
+      h3 + * {
+        margin-top: 0;
+      }
+      .prose :where(.prose > :first-child) {
+        margin-top: 0;
+      }
+      .prose :where(.prose > :last-child) {
+        margin-bottom: 0;
+      }
+      @media (min-width: 768px) {
+        body {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    </style>
   </head>
-  <body>
+  <body class="prose">
     <header></header>
-    <main></main>
+    <article>
+      <h1># Danny Coates</h1>
+      <address>
+        <a href="mailto:dannycoates@gmail.com">dannycoates@gmail.com</a>
+        <br />
+        <a href="https://github.com/dannycoates">github.com/dannycoates</a>
+      </address>
+      <section>
+        <h2># Skills</h2>
+        <p>
+          I have 20 years of professional experience as a full-stack developer
+          and jack-of-all-trades. I enjoy collaborating on all phases of
+          software from initial design, implementation, launch, operation,
+          maintenance, and transitions. I'm most confident as a lead developer
+          and mentor, but also love resolving stubborn bugs and organizational
+          problems. Over the years I've accrued skills for a laundry list of
+          languages, cloud platforms, technologies, and development
+          methodologies. I'm most proficient in Javascript, C#, and Ruby, but
+          I'm also comfortable with Java, C/C++, Python, and Objective-C. I have
+          considerable experience in scaling web applications. I value
+          curiosity, teamwork, performance, reliability, empathy, honesty,
+          privacy, and simplicity.
+        </p>
+      </section>
+      <section>
+        <h2># Tech</h2>
+        <section>
+          <h3>## Languages</h3>
+          <p>
+            Javascript, Ruby, Rust, C#, C, C++, Objective-C, Python, HTML, CSS,
+            SQL
+          </p>
+        </section>
+        <section>
+          <h3>## Server / Web</h3>
+          <p>
+            Node.js, React, Svelte, Rails, ASP.NET, OAuth, WebCrypto, Web
+            Components, Web Extensions, AWS, Google Cloud, Postgres, MySQL,
+            Oracle, PLSQL, Redis, MongoDB, Riak, ElasticSearch
+          </p>
+        </section>
+        <section>
+          <h3>## Desktop / Mobile</h3>
+          <p>
+            Win32, GDI+, COM, WinForms, MFC, STL, XUL, XPCOM, NSAPI, Windows
+            Mobile, CUDA, iOS SDK, Cocoa, Audio codecs
+          </p>
+        </section>
+      </section>
+      <section>
+        <h2># Experience</h2>
+        <article>
+          <h3>## Founder, Bitcataz LLC, <time>2022</time> to Present</h3>
+          <p>
+            I design, implement, and support full stack web applications from
+            concept to daily operations.
+          </p>
+        </article>
+        <article>
+          <h3>
+            ## Staff Software Engineer, Mozilla, <time>2013</time> to
+            <time>2022</time>
+          </h3>
+          <p>
+            Mozilla was a dream job. I was fortunate to work on many projects
+            and had several roles on multiple teams over the years. On the
+            Identity team I helped expand Persona and later designed and
+            implemented the Firefox Accounts authentication service, serving
+            millions of active users. I later joined the Test Pilot team leading
+            or collaborating on a variety of experimental projects. I also
+            managed and mentored groups of interns on projects like Firefox
+            Send. The best part was collaborating with so many smart and kind
+            people across the organization. I left to pursue another dream of
+            running my own business.
+          </p>
+        </article>
+        <article>
+          <h3>
+            ## Senior Developer, Voxer, <time>2011</time> to <time>2013</time>
+          </h3>
+          <p>
+            I scaled the audio backend service from 30k users to over 30M users.
+            We implemented a unique, patented, method of delivering both live
+            streamed and recorded audio seamlessly and simultaneously. We
+            experienced exponential growth and had to refactor and optimize our
+            Node.js applications quickly to meet demand. During this time I
+            found and helped fix several critical bugs in Node.js core.
+          </p>
+        </article>
+        <article>
+          <h3>
+            ## Senior Developer, Healthcare Insight, <time>2009</time> to
+            <time>2011</time>
+          </h3>
+          <p>
+            I redesigned an existing PLSQL application in C#, architected its
+            infrastructure to improve scalability and maintainability, and led
+            the development and integration. The project was completed on time
+            and provided an overall 10x performance improvement over the PLSQL
+            system. Subsequent releases improved performance further. I also
+            implemented a testing framework based on Cucumber and Ruby that has
+            increased developer and subject matter expert collaboration and
+            productivity immensely.
+          </p>
+        </article>
+        <article>
+          <h3>
+            ## Independent Software Developer, <time>2008</time> to
+            <time>2009</time>
+          </h3>
+          <p>
+            I wrote a custom CD burner application for Power Music Inc. that
+            burns mp3 music gaplessly to CD. The Mac version is written in
+            Objective-C with Cocoa, and the Windows version is C++ and MFC. The
+            burners preprocess the mp3 files to produce gapless audio files, and
+            then burn the audio to disc. I designed the user interfaces to be
+            simple. The programs could be run without any installation and file
+            sizes were kept as small as possible for fast downloading, under
+            1MB.
+          </p>
+        </article>
+        <article>
+          <h3>
+            ## Senior Developer, Podfitness.com, <time>2005</time> to
+            <time>2008</time>
+          </h3>
+          <p>
+            As a member of the initial development team I designed, developed,
+            and deployed a multi-platform software client used by over 150,000
+            customers within 2 years to create dynamic workout programs mixed
+            with their personal music. I collaborated with SMEs to design and
+            implement a data model for the business. I led a team that created a
+            training assistant application for mobile phones, before the iPhone,
+            in which the user can interact with their training program in
+            real-time. That project resulted in the establishment of a
+            subsidiary company. Our team integrated server systems with client
+            software in a unique way that unified the user experience. We used
+            an agile approach to development that quickly produced working,
+            useful products. I was considered the expert of the core business
+            technology.
+          </p>
+        </article>
+        <article>
+          <h3>
+            ## Student / Junior Developer, <time>2003</time> to
+            <time>2005</time>
+          </h3>
+          <p>
+            While studying the fundementals of computer science I did contract
+            software development to hone my real world skills.
+          </p>
+        </article>
+        <article>
+          <h3>
+            ## Intelligence Analyst, USMC, <time>1999</time> to
+            <time>2003</time>
+          </h3>
+          <p>
+            I received two medals while serving in the Marines related to IT:
+          </p>
+          <ul>
+            <li>
+              <b>*Navy Achievement Medal*</b> - Designed, deployed, and
+              maintained an organizational website during Operation Iraqi
+              Freedom that served up to 20,000 documents from multiple data
+              feeds of time critical information to a multi-service intelligence
+              community of over 2,000 users with no downtime using ASP.NET 1.0,
+              MSSQL Server, and SharePoint.
+            </li>
+            <li>
+              <b>*Navy Achievement Medal*</b> - Awarded for developing and
+              deploying the first web enabled database application for
+              maintaining and tracking the records and availability of
+              multilingual Marines within an organization of over 30,000
+              individuals written in classic ASP with VBScript and MSSQL Server.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section>
+        <h2># Open Source</h2>
+        <p>
+          The full list of my repos is on
+          <a href="https://github.com/dannycoates?tab=repositories">github</a>
+        </p>
+        <h3>## Highlights</h3>
+        <ul>
+          <li>
+            <a href="https://github.com/mozilla/send">Firefox Send</a> - Simple
+            E2E file transfer (Hit #1 on Hacker News several times)
+          </li>
+          <li>
+            <a href="https://github.com/mozilla/fxa">Firefox Accounts</a> -
+            Securly serving millions of Firefox users
+          </li>
+          <li>
+            <a href="https://github.com/node-inspector/node-inspector"
+              >node-inspector</a
+            >
+            - The first graphical debugger for Node
+          </li>
+          <li>
+            <a href="https://github.com/dannycoates/v8-profiler">v8-profiler</a>
+            - Node bindings for the v8 profiler API
+          </li>
+          <li>
+            <a href="https://github.com/dannycoates/poolee">poolee</a> - Node
+            HTTP load balancing connection pool
+          </li>
+          <li>
+            <a href="https://github.com/dannycoates/franz-kafka">franz-kafka</a>
+            - Node client for Apache Kafka
+          </li>
+          <li>
+            <a href="https://github.com/dannycoates/zkjs">zkjs</a> - Node client
+            for Apache ZooKeeper
+          </li>
+        </ul>
+        <p>
+          I've also contributed to nodejs/node and reported several bugs to v8
+        </p>
+      </section>
+    </article>
     <footer></footer>
   </body>
 </html>
