@@ -16,24 +16,9 @@
       media="(prefers-color-scheme: dark)"
     />
     <style>
-      *,
-      ::after,
-      ::before {
-        box-sizing: border-box;
-        border-width: 0;
-        border-style: solid;
-        border-color: #e5e7eb;
-      }
-      ::after,
-      ::before {
-        --x-content: "";
-      }
-      :host,
       html {
         line-height: 1.5;
         -webkit-text-size-adjust: 100%;
-        -moz-tab-size: 4;
-        tab-size: 4;
         font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
           "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         font-feature-settings: normal;
@@ -41,30 +26,54 @@
         -webkit-tap-highlight-color: transparent;
       }
       body {
+        color: #374151;
+        font-size: 1rem;
+        line-height: 1.75;
         margin: 2rem;
-        line-height: inherit;
+        max-width: 42rem;
+        --h-color: #111827;
       }
-      h1,
-      h2,
+      h1 {
+        color: var(--h-color);
+        font-weight: 800;
+        font-size: 2.25em;
+        margin-top: 0;
+        margin-bottom: 0.8888889em;
+        line-height: 1.1111111;
+      }
+      h2 {
+        color: var(--h-color);
+        font-weight: 700;
+        font-size: 1.5em;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        line-height: 1.3333333;
+      }
+
+      h2::before {
+        content: "# ";
+      }
       h3 {
-        font-size: inherit;
-        font-weight: inherit;
+        color: var(--h-color);
+        font-weight: 600;
+        font-size: 1.25em;
+        margin-top: 1.6em;
+        margin-bottom: 0.6em;
+        line-height: 1.6;
+      }
+      h3 + * {
+        margin-top: 0;
+      }
+      h3::before {
+        content: "## ";
       }
       a {
-        color: var(--x-prose-links);
+        color: #111827;
         text-decoration: underline;
         font-weight: 500;
       }
       b {
         font-weight: bolder;
-      }
-      h1,
-      h2,
-      h3,
-      p {
-        margin: 0;
-        margin-top: 1.25em;
-        margin-bottom: 1.25em;
       }
       ul {
         list-style: none;
@@ -75,65 +84,15 @@
         margin-bottom: 1.25em;
         padding-left: 1.625em;
       }
-      .prose {
-        color: var(--x-prose-body);
-        max-width: 42rem;
-      }
-
-      .prose :where(ul > li)::marker {
-        color: var(--x-prose-bullets);
-      }
-      .prose :where(h1) {
-        color: var(--x-prose-headings);
-        font-weight: 800;
-        font-size: 2.25em;
-        margin-top: 0;
-        margin-bottom: 0.8888889em;
-        line-height: 1.1111111;
-      }
-      .prose :where(h2) {
-        color: var(--x-prose-headings);
-        font-weight: 700;
-        font-size: 1.5em;
-        margin-top: 2em;
-        margin-bottom: 1em;
-        line-height: 1.3333333;
-      }
-      .prose :where(h3) {
-        color: var(--x-prose-headings);
-        font-weight: 600;
-        font-size: 1.25em;
-        margin-top: 1.6em;
-        margin-bottom: 0.6em;
-        line-height: 1.6;
-      }
-      .prose {
-        --x-prose-body: #374151;
-        --x-prose-headings: #111827;
-        --x-prose-links: #111827;
-        --x-prose-bullets: #d1d5db;
-        font-size: 1rem;
-        line-height: 1.75;
-      }
       li {
         margin-top: 0.5em;
         margin-bottom: 0.5em;
-      }
-      ul > li {
         padding-left: 0.375em;
       }
-      h2 + * {
-        margin-top: 0;
+      li::marker {
+        color: #d1d5db;
       }
-      h3 + * {
-        margin-top: 0;
-      }
-      .prose :where(.prose > :first-child) {
-        margin-top: 0;
-      }
-      .prose :where(.prose > :last-child) {
-        margin-bottom: 0;
-      }
+
       @media (min-width: 768px) {
         body {
           margin-left: auto;
@@ -142,17 +101,16 @@
       }
     </style>
   </head>
-  <body class="prose">
-    <header></header>
+  <body>
     <article>
-      <h1># Danny Coates</h1>
+      <h1>Danny Coates</h1>
       <address>
         <a href="mailto:dannycoates@gmail.com">dannycoates@gmail.com</a>
         <br />
         <a href="https://github.com/dannycoates">github.com/dannycoates</a>
       </address>
       <section>
-        <h2># Skills</h2>
+        <h2>Skills</h2>
         <p>
           I have 20 years of professional experience as a full-stack developer
           and jack-of-all-trades. I enjoy collaborating on all phases of
@@ -169,16 +127,16 @@
         </p>
       </section>
       <section>
-        <h2># Tech</h2>
+        <h2>Tech</h2>
         <section>
-          <h3>## Languages</h3>
+          <h3>Languages</h3>
           <p>
             Javascript, Ruby, Rust, C#, C, C++, Objective-C, Python, HTML, CSS,
             SQL
           </p>
         </section>
         <section>
-          <h3>## Server / Web</h3>
+          <h3>Server / Web</h3>
           <p>
             Node.js, React, Svelte, Rails, ASP.NET, OAuth, WebCrypto, Web
             Components, Web Extensions, AWS, Google Cloud, Postgres, MySQL,
@@ -186,7 +144,7 @@
           </p>
         </section>
         <section>
-          <h3>## Desktop / Mobile</h3>
+          <h3>Desktop / Mobile</h3>
           <p>
             Win32, GDI+, COM, WinForms, MFC, STL, XUL, XPCOM, NSAPI, Windows
             Mobile, CUDA, iOS SDK, Cocoa, Audio codecs
@@ -194,9 +152,9 @@
         </section>
       </section>
       <section>
-        <h2># Experience</h2>
+        <h2>Experience</h2>
         <article>
-          <h3>## Founder, Bitcataz LLC, <time>2022</time> to Present</h3>
+          <h3>Founder, Bitcataz LLC, <time>2022</time> to Present</h3>
           <p>
             I design, implement, and support full stack web applications from
             concept to daily operations.
@@ -204,7 +162,7 @@
         </article>
         <article>
           <h3>
-            ## Staff Software Engineer, Mozilla, <time>2013</time> to
+            Staff Software Engineer, Mozilla, <time>2013</time> to
             <time>2022</time>
           </h3>
           <p>
@@ -222,7 +180,7 @@
         </article>
         <article>
           <h3>
-            ## Senior Developer, Voxer, <time>2011</time> to <time>2013</time>
+            Senior Developer, Voxer, <time>2011</time> to <time>2013</time>
           </h3>
           <p>
             I scaled the audio backend service from 30k users to over 30M users.
@@ -235,7 +193,7 @@
         </article>
         <article>
           <h3>
-            ## Senior Developer, Healthcare Insight, <time>2009</time> to
+            Senior Developer, Healthcare Insight, <time>2009</time> to
             <time>2011</time>
           </h3>
           <p>
@@ -251,7 +209,7 @@
         </article>
         <article>
           <h3>
-            ## Independent Software Developer, <time>2008</time> to
+            Independent Software Developer, <time>2008</time> to
             <time>2009</time>
           </h3>
           <p>
@@ -267,7 +225,7 @@
         </article>
         <article>
           <h3>
-            ## Senior Developer, Podfitness.com, <time>2005</time> to
+            Senior Developer, Podfitness.com, <time>2005</time> to
             <time>2008</time>
           </h3>
           <p>
@@ -288,7 +246,7 @@
         </article>
         <article>
           <h3>
-            ## Student / Junior Developer, <time>2003</time> to
+            Student / Junior Developer, <time>2003</time> to
             <time>2005</time>
           </h3>
           <p>
@@ -298,7 +256,7 @@
         </article>
         <article>
           <h3>
-            ## Intelligence Analyst, USMC, <time>1999</time> to
+            Intelligence Analyst, USMC, <time>1999</time> to
             <time>2003</time>
           </h3>
           <p>
@@ -324,12 +282,12 @@
         </article>
       </section>
       <section>
-        <h2># Open Source</h2>
+        <h2>Open Source</h2>
         <p>
           The full list of my repos is on
           <a href="https://github.com/dannycoates?tab=repositories">github</a>
         </p>
-        <h3>## Highlights</h3>
+        <h3>Highlights</h3>
         <ul>
           <li>
             <a href="https://github.com/mozilla/send">Firefox Send</a> - Simple
