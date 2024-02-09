@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <title>Danny Coates</title>
-    <meta name="description" content="Danny Coates is a full-stack software engineer with 20 years of experience.">
+    <meta
+      name="description"
+      content="Danny Coates is a full-stack software engineer with 20 years of experience."
+    />
     <link
       rel="icon"
       href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiIGNsaXAtcnVsZT0iZXZlbm9kZCIgdmlld0JveD0iMCAwIDEwODAgMTA4MCI+PHBhdGggZD0iTTY1MiA3NDJjLTggNy0xNiAxMi0yNiAxNS0xNCA0LTMxIDItNTEtMTAtMzItMTktNTUtNDgtNzAtODItNSAxNi0xMSAzMi0xOCA0Ni0yNCA0NS01OCA3Ny0xMDcgODYtMjEgNS03MC0zLTg3LTEyYTE4MCAxODAgMCAwIDEtODQtMjA2YzEyLTQ5IDQ0LTkxIDg2LTEwOSA0Ni0yMCAxMDUtMTUgMTY5IDQxbDcgMTAgMS00MGMyLTEwNy0xMC0yMTMtOS0yNTcgMS0yMiA4LTM1IDEzLTQwIDgtOCAxNi0xMCAyNC04IDUgMSAxNSAzIDIxIDE2bDMgOSA1IDUxYzUgMzYgNiA3MSA2IDEwOCAwIDYyLTEwIDE1NSA2IDIzMyA5IDQ0IDI2IDg0IDYzIDEwNmw2IDMgMiAxIDUtNmM3LTExIDEzLTI1IDE4LTQyIDExLTI5IDIzLTY0IDQwLTkzYTE3OSAxNzkgMCAwIDEgNTItNTljMTMtMTAgMjktMTUgNDYtMTYgMTctMiAzNy0yIDU4IDIgMTggNCAzNSAxOCA0NyAyOGwxNyAxMmMyNiAyMS0yIDQ2LTUgNDctMSAxLTEyIDctMjYtMS0xLTEtMzAtMjAtNjItMjlsLTE2LTNjLTIxIDMtMzYgMTItNDggMjYtMjYgMzEtNDEgNzYtNDEgMTE0IDAgMjggOCA1MyAzMCA2NCAxMzUgNzIgMjU0LTUwIDI3MS0xOTUgOS03Ny0xMi0xNjYtNTMtMjI3QzgzNiAxNjEgNjgyIDgzIDUzMSA4OWMtMTUxIDUtMjk5IDk0LTM5NyAyNTktMTA5IDE4NC00MSAzNzYgOTcgNTAyIDEzOSAxMjYgMzUwIDE4NyA1MjggMTAzIDQwLTE5IDc4LTMyIDExMC02NGEyOCAyOCAwIDAgMSA0MCA0MGMtMzcgMzYtODAgNTItMTI2IDc0LTE5OSA5NC00MzUgMjktNTkwLTExMkMzNyA3NDgtMzggNTI5IDg2IDMxOUE1NDIgNTQyIDAgMCAxIDUyOSAzM2MxNjktNiAzNDEgNzkgNDYzIDI2MSA0NyA3MSA3MiAxNzUgNjEgMjY1LTIxIDE4NC0xODAgMzMwLTM1MiAyMzgtMjMtMTMtMzktMzItNDktNTVaTTQ2OSA1NDZsLTMgNGEyOCAyOCAwIDAgMS0zOSAzYy00Mi0zNy04MC00NS0xMDktMzItMjggMTItNDcgNDAtNTUgNzItMTMgNTAgMSAxMTEgNTggMTQzIDEwIDUgMzcgOSA0OCA2IDQxLTggNjQtNDAgNzktODMgMTEtMzMgMTgtNzIgMjEtMTEzWiIvPjwvc3ZnPg=="
@@ -11,15 +14,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="theme-color"
-      content="#000"
+      content="#d1d5db"
       media="(prefers-color-scheme: light)"
     />
     <meta
       name="theme-color"
-      content="#000"
+      content="#161a21"
       media="(prefers-color-scheme: dark)"
     />
     <style>
+      :root {
+        color-scheme: light dark;
+      }
       html {
         line-height: 1.5;
         -webkit-text-size-adjust: 100%;
@@ -30,12 +36,13 @@
         -webkit-tap-highlight-color: transparent;
       }
       body {
-        color: #374151;
+        color: light-dark(#374151, #d1d5db);
+        background-color: light-dark(#d1d5db, #161a21);
         font-size: 1rem;
         line-height: 1.75;
         margin: 2rem;
         max-width: 42rem;
-        --h-color: #111827;
+        --h-color: light-dark(#111827, ##d1d5db);
       }
       h1 {
         color: var(--h-color);
@@ -71,7 +78,7 @@
         content: "## ";
       }
       a {
-        color: #111827;
+        color: var(--h-color);
         text-decoration: underline;
       }
       b {
@@ -84,7 +91,7 @@
       address {
         display: inline-flex;
         flex-direction: column;
-        gap: 0.5em
+        gap: 0.5em;
       }
       ul {
         list-style: none;
@@ -120,7 +127,9 @@
       <h1>Danny Coates</h1>
       <address>
         <a href="mailto:dannycoates@gmail.com">dannycoates@gmail.com</a>
-        <a href="https://mastodon.social/@antiserf">@antiserf@mastodon.social</a>
+        <a href="https://mastodon.social/@antiserf"
+          >@antiserf@mastodon.social</a
+        >
         <a href="https://github.com/dannycoates">github.com/dannycoates</a>
       </address>
       <section>
