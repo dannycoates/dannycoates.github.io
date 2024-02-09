@@ -14,12 +14,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="theme-color"
-      content="#d1d5db"
+      content="#f1f1f0"
       media="(prefers-color-scheme: light)"
     />
     <meta
       name="theme-color"
-      content="#161a21"
+      content="#3a3d43"
       media="(prefers-color-scheme: dark)"
     />
     <style>
@@ -36,13 +36,10 @@
         -webkit-tap-highlight-color: transparent;
       }
       body {
-        color: light-dark(#374151, #d1d5db);
-        background-color: light-dark(#d1d5db, #161a21);
         font-size: 1rem;
         line-height: 1.75;
         margin: 2rem;
         max-width: 42rem;
-        --h-color: light-dark(#111827, ##d1d5db);
       }
       h1 {
         color: var(--h-color);
@@ -107,10 +104,26 @@
         margin-bottom: 0.5em;
         padding-left: 0.375em;
       }
-      li::marker {
-        color: #d1d5db;
+      @media (prefers-color-scheme: light) {
+        body {
+          color: #374151;
+          background-color: #f1f1f0;
+          --h-color: #111827;
+        }
+        li::marker {
+          color: #a0a2a5;
+        }
       }
-
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: #f1f1f0;
+          background-color: #3a3d43;
+          --h-color: #f1f1f0;
+        }
+        li::marker {
+          color: #81817c;
+        }
+      }
       @media (min-width: 768px) {
         body {
           margin-left: auto;
