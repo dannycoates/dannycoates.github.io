@@ -81,8 +81,10 @@
       b::after {
         content: "*";
       }
-      br {
-        margin-bottom: 0.5em;
+      address {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em
       }
       ul {
         list-style: none;
@@ -107,8 +109,8 @@
           margin-left: auto;
           margin-right: auto;
         }
-        br {
-          margin-bottom: auto;
+        address {
+          gap: 0;
         }
       }
     </style>
@@ -118,7 +120,6 @@
       <h1>Danny Coates</h1>
       <address>
         <a href="mailto:dannycoates@gmail.com">dannycoates@gmail.com</a>
-        <br />
         <a href="https://github.com/dannycoates">github.com/dannycoates</a>
       </address>
       <section>
